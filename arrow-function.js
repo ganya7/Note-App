@@ -12,14 +12,15 @@ var user = {
     name: 'Arvind',
     sayHi: () => {
         console.log(`Hi Im ${this.name}`);
-        //arrow functions do not bind a this keyword, if you are using a this keyword inside of your function then its not gonna work if you swap a normal es5 function with arrow function
+        //arrow functions do not bind a this keyword, if you are using a this keyword inside of your function then its
+        // not gonna work if you swap a normal es5 function with arrow function
         //the this binding refers to the parent binding and in this case there is no parent function and this will refer to parent this keyword
     },
-    sayHiAlternate ()/*this is a normal function but no need of the keyword 'function' as it is not an arrow function*/ {
+    sayHiAlternate()/*this is a normal function but no need of the keyword 'function' as it is not an arrow function*/ {
         console.log(`Hi Im ${this.name}`);
         console.log(arguments);
     }
 };
 //it does not bind argument array
 
-user.sayHiAlternate(1,2,3);
+user.sayHiAlternate(1, 2, 3);
